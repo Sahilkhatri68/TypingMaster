@@ -90,17 +90,17 @@ body {
 }
 
 .incorrect_char {
-  color: red;
+  /* color: red; */
   text-decoration: underline;
 }
 
 .correct_char {
-  color: darkgreen;
+  /* color: darkgreen; */
 }
 
 .restart_btn {
   display: none;
-  background-color: #326765;
+  background-color: #efa423;
   font-size: 1.5rem;
   padding: 10px;
   border: 0px;
