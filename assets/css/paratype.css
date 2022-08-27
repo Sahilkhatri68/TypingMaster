@@ -90,12 +90,12 @@ body {
 }
 
 .incorrect_char {
-  color: red;
+  /* color: red; */
   text-decoration: underline;
 }
 
 .correct_char {
-  color: darkgreen;
+  /* color: darkgreen; */
 }
 
 .restart_btn {
