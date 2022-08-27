@@ -11,11 +11,13 @@ body {
   align-items: center;
   margin-top: 50px;
 }
+
 .maindiiv {
   width: 60%;
   margin: auto;
   padding-bottom: 30px;
 }
+
 .heading {
   margin-bottom: 70px;
   font-size: 3rem;
@@ -23,10 +25,12 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
 .linkcol {
   text-decoration: none;
   color: white;
 }
+
 .header {
   display: flex;
   align-items: center;
@@ -68,15 +72,17 @@ body {
 }
 
 .quote {
-  background-color: #efa423;
+  background-color: white;
   font-size: 1.5rem;
   margin: 10px 0px;
   padding: 25px;
   /* box-shadow: black 5px 8px 5px; */
 }
+
 .spancol {
   color: #efa423;
 }
+
 .input_area {
   background-color: #f5f5c6;
   height: 80px;
