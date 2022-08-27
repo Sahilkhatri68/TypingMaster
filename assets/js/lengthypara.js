@@ -1,6 +1,25 @@
 // define the time limit
-let TIME_LIMIT = 300;
+var TIME_LIMIT = 300;
+var timer_id = document.getElementsByClassName("timer_id");
+timer_id[0].onclick = function () {
+  TIME_LIMIT = 300;
+  resetValues();
+}
+timer_id[1].onclick = function () {
+  TIME_LIMIT = 600;
+  resetValues();
 
+}
+timer_id[2].onclick = function () {
+  TIME_LIMIT = 900;
+  resetValues();
+
+}
+timer_id[3].onclick = function () {
+  TIME_LIMIT = 1200;
+  resetValues();
+
+}
 // define quotes to be used
 let quotes_array = [
   "Mental health is crucial and integrates a component of health. Mental health includes an individual’s psychological, emotional and social well-being. Proper mental health results in the proper mental functioning that result in being productive in activities, healthy and fulfilling relationships with other people andhaving the ability to cope and adapt to adversity.Proper mental health is essential in every stage of life – from childhood andteenage to adulthood. Throughout a lifetime, an individual can experience mental health issue at any point. This affects not only their mood and behavior but also changes their way of thinking, of looking at life and facing challenges.",

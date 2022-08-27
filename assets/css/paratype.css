@@ -5,6 +5,7 @@ body {
   background-image: url("../images/choosing-bg.jpg");
 }
 
+
 .container {
   display: flex;
   flex-direction: column;
@@ -20,7 +21,7 @@ body {
 
 .heading {
   margin-bottom: 70px;
-  font-size: 3rem;
+  font-size: 25px;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -68,7 +69,8 @@ body {
 .curr_accuracy,
 .curr_cpm,
 .curr_wpm {
-  font-size: 2.75rem;
+  font-size: 35px;
+  margin-top: 10px;
 }
 
 .quote {
@@ -111,4 +113,48 @@ body {
   padding: 10px;
   border: 0px;
   /* box-shadow: black 5px 8px 5px; */
+}
+
+.dropbtn {
+  background-color: #efa423;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.droppddownn {
+  position: relative;
+  display: inline-block;
+}
+
+.droppddownn-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.droppddownn-content a {
+  color: black;
+  padding: 9px 14px;
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+}
+
+.droppddownn-content a:hover {
+  background-color: #ddd;
+}
+
+.droppddownn:hover .droppddownn-content {
+  display: block;
+}
+
+.timer_id {
+  background-color: ddd;
+  color: black;
+  cursor: pointer;
 }

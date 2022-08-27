@@ -1,12 +1,35 @@
+
+
+
 // define the time limit
-let TIME_LIMIT = 120;
+var TIME_LIMIT = 120;
+var timer_id = document.getElementsByClassName("timer_id");
+timer_id[0].onclick = function () {
+  TIME_LIMIT = 300;
+  resetValues();
+}
+timer_id[1].onclick = function () {
+  TIME_LIMIT = 600;
+  resetValues();
+
+}
+timer_id[2].onclick = function () {
+  TIME_LIMIT = 900;
+  resetValues();
+
+}
+timer_id[3].onclick = function () {
+  TIME_LIMIT = 1200;
+  resetValues();
+
+}
 
 // define quotes to be used
 let quotes_array = [
   "Push yourself, because no one else is going to do it for you.",
   "Failure is the condiment that gives success its flavor.",
   "Wake up with determination. Go to bed with satisfaction.",
-  "It's going to be hard, but hard does not mean impossible.",  
+  "It's going to be hard, but hard does not mean impossible.",
   "Learning never exhausts the mind.",
   "The only way to do great work is to love what you do.",
 ];
