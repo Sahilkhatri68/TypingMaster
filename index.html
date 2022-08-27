@@ -1,4 +1,3 @@
- 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,8 +35,9 @@
         <nav id="menu" class="main-nav" role="navigation">
             <ul class="main-menu">
                 <!-- <li><a href="#section4">Home</a></li> -->
-                <li class="has-submenu"><a href="#section2">Test Type</a>
+                <li class="has-submenu"><a href="#section2">Type</a>
                     <ul class="sub-menu">
+                        <li><a href="./MainTest.html">Test</a></li>
                         <li>
                             <a href="./typing.html">Single Word</a>
                         </li>
@@ -592,69 +592,69 @@
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/SearchButton.js"></script>
     <script>
-    //according to loftblog tut
-    $('.nav li:first').addClass('active');
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
 
-    var showSection = function showSection(section, isAnimate) {
-        var
-            direction = section.replace(/#/, ''),
-            reqSection = $('.section').filter('[data-section="' + direction + '"]'),
-            reqSectionPos = reqSection.offset().top - 0;
+        var showSection = function showSection(section, isAnimate) {
+            var
+                direction = section.replace(/#/, ''),
+                reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+                reqSectionPos = reqSection.offset().top - 0;
 
-        if (isAnimate) {
-            $('body, html').animate({
+            if (isAnimate) {
+                $('body, html').animate({
                     scrollTop: reqSectionPos
                 },
-                800);
-        } else {
-            $('body, html').scrollTop(reqSectionPos);
-        }
-
-    };
-
-    var checkSection = function checkSection() {
-        $('.section').each(function() {
-            var
-                $this = $(this),
-                topEdge = $this.offset().top - 80,
-                bottomEdge = topEdge + $this.height(),
-                wScroll = $(window).scrollTop();
-            if (topEdge < wScroll && bottomEdge > wScroll) {
-                var
-                    currentId = $this.data('section'),
-                    reqLink = $('a').filter('[href*=\\#' + currentId + ']');
-                reqLink.closest('li').addClass('active').
-                siblings().removeClass('active');
+                    800);
+            } else {
+                $('body, html').scrollTop(reqSectionPos);
             }
+
+        };
+
+        var checkSection = function checkSection() {
+            $('.section').each(function () {
+                var
+                    $this = $(this),
+                    topEdge = $this.offset().top - 80,
+                    bottomEdge = topEdge + $this.height(),
+                    wScroll = $(window).scrollTop();
+                if (topEdge < wScroll && bottomEdge > wScroll) {
+                    var
+                        currentId = $this.data('section'),
+                        reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+                    reqLink.closest('li').addClass('active').
+                        siblings().removeClass('active');
+                }
+            });
+        };
+
+        $('.main-menu, .scroll-to-section').on('click', 'a', function (e) {
+            if ($(e.target).hasClass('external')) {
+                return;
+            }
+            e.preventDefault();
+            $('#menu').removeClass('active');
+            showSection($(this).attr('href'), true);
         });
-    };
 
-    $('.main-menu, .scroll-to-section').on('click', 'a', function(e) {
-        if ($(e.target).hasClass('external')) {
-            return;
-        }
-        e.preventDefault();
-        $('#menu').removeClass('active');
-        showSection($(this).attr('href'), true);
-    });
-
-    $(window).scroll(function() {
-        checkSection();
-    });
-
-    // search button js
-
-    const basicAutocomplete = document.querySelector('#search-autocomplete');
-    const data = ['One', 'Two', 'Three', 'Four', 'Five'];
-    const dataFilter = (value) => {
-        return data.filter((item) => {
-            return item.toLowerCase().startsWith(value.toLowerCase());
+        $(window).scroll(function () {
+            checkSection();
         });
-    };
 
-    new mdb.Autocomplete(basicAutocomplete, {
-        filter: dataFilter
-    });
+        // search button js
+
+        const basicAutocomplete = document.querySelector('#search-autocomplete');
+        const data = ['One', 'Two', 'Three', 'Four', 'Five'];
+        const dataFilter = (value) => {
+            return data.filter((item) => {
+                return item.toLowerCase().startsWith(value.toLowerCase());
+            });
+        };
+
+        new mdb.Autocomplete(basicAutocomplete, {
+            filter: dataFilter
+        });
     </script>
 </body>
 
